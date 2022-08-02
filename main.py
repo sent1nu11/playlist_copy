@@ -1,6 +1,6 @@
 import os, shutil
 
-source_path = '/mnt/ext4_data/Music/Moby/18/Moby -  We Are All Made of Stars.mp3'
+source_path = '/mnt/ext4_data/Music/Anastacia/Freak of Nature/Anastacia -  Paid My Dues.mp3'
 dest_path = '/media/rogerwu/MUSIC'
 
 a_file = open("Energy_Playlist.m3u", "r")
@@ -23,3 +23,7 @@ slash = source_path.rfind('/')+1
 print(slash)
 file = source_path[slash:-1]
 print(file)
+
+dest_file = dest_path + '/' + file
+
+shutil.copy(source_path, dest_file)
